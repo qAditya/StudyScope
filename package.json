@@ -8,7 +8,7 @@
     "dev": "nodemon app.js",
     "client": "cd client && npm run dev",
     "dev:full": "concurrently \"npm run dev\" \"npm run client\"",
-    "build": "cd client && npm ci && npm run build",
+    "build": "cd client && npm install --include=dev && npm run build",
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
