@@ -103,7 +103,7 @@ const Analytics = () => {
 
   const fetchUploads = async () => {
     try {
-      const response = await axios.get('/api/api/uploads');
+      const response = await axios.get('/api/uploads');
       setUploads(response.data);
     } catch (error) {
       console.error('Error fetching uploads:', error);
@@ -119,7 +119,7 @@ const Analytics = () => {
       if (selectedUpload !== 'all') params.append('upload', selectedUpload);
       if (genderFilter !== 'all') params.append('gender', genderFilter);
       
-      const response = await axios.get(`/api/api/analytics/specializations?${params}`);
+      const response = await axios.get(`/api/analytics/specializations?${params}`);
       setSpecializationData(response.data);
     } catch (error) {
       console.error('Error fetching specialization analytics:', error);
@@ -130,7 +130,7 @@ const Analytics = () => {
 
   const fetchStudentDetails = async (studentId) => {
     try {
-      const response = await axios.get(`/api/api/students/${studentId}/details`);
+      const response = await axios.get(`/api/students/${studentId}/details`);
       setStudentDetails(response.data);
       setStudentDetailsOpen(true);
     } catch (error) {

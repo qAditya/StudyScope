@@ -50,7 +50,7 @@ const Files = () => {
 
   const fetchUploads = async () => {
     try {
-      const response = await axios.get('/api/api/uploads');
+      const response = await axios.get('/api/uploads');
       setUploads(response.data);
     } catch (error) {
       console.error('Error fetching uploads:', error);
@@ -61,7 +61,7 @@ const Files = () => {
 
   const fetchStudentsByUpload = async (uploadId) => {
     try {
-      const response = await axios.get(`/api/api/students?upload=${uploadId}`);
+      const response = await axios.get(`/api/students?upload=${uploadId}`);
       setStudents(response.data);
     } catch (error) {
       console.error('Error fetching students:', error);

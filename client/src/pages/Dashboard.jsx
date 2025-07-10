@@ -45,8 +45,8 @@ const Dashboard = () => {
   const fetchDashboardData = async () => {
     try {
       const [uploadsResponse, studentsResponse] = await Promise.all([
-        axios.get('/api/api/uploads'),
-        axios.get('/api/api/students'),
+        axios.get('/api/uploads'),
+        axios.get('/api/students'),
       ]);
 
       const uploads = uploadsResponse.data;
